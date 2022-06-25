@@ -27,9 +27,10 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  background-color: white;
-  color: black;
+  background: #f2f2f2;
+  color: #000000;
 }
+
 ul {
   list-style-type: none;
 }
@@ -45,36 +46,123 @@ ol {
   padding-bottom: 82px;
 }
 
+.page-footer {
+  display: flex;
+}
 
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
   flex-grow: 1;
-
 }
 
 .navigation {
   display: flex;
   flex-wrap: wrap;
-  width: 1200px;
   min-height: 65px;
-  margin: 0 auto;
 }
 
 .advantages-item {
   width: 400px;
 }
 
+.advantages-include {
+  display: grid;
+  grid-template-rows: 384px 384px;
+  grid-column: 1 / 4;
+  grid-template-areas: "house food suvenir";
+  padding: 0;
+}
+
 .advantages-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 384px 384px 384px ;
   text-align: center;
   margin: 0;
   padding: 0;
 }
+
+
+
+.advantages-item-realcountry {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 384px 384px;
+
+}
+
+.advantages-first-description {
+  background-color: #82B3D3;
+}
+
+.advantages-item-house {
+  background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  grid-area: house;
+
+}
+
+.advantages-item-food {
+  width: 400px;
+  grid-area: food;
+
+
+}
+
+.demon-bridge {
+  display: grid;
+  grid-area: bridge;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.advantages-img {
+  display: grid;
+  order: -1;
+}
+
+.advantages-item-suvenir {
+  width: 400px;
+  grid-area: suvenir;
+}
+.advantages-desc {
+background-color:#82B3D3;
+}
+.advantages-item-bridge {
+  display: grid;
+  grid-row: 3/4;
+  grid-template-columns: 400px 400px 400px;
+ 
+}
+
+.advantages-item-place {
+  
+  grid-area: place;
+  grid-column: 1/2;
+
+}
+
+.advantages-item-road {
+  
+  grid-area: road;
+  grid-column: 2/3;
+
+}
+
+.advantages-item-people {
+  
+  grid-area: people;
+  grid-column: 3/4;
+
+}
+
+
 
 .interesting {
   display: block;
@@ -110,7 +198,6 @@ ol {
 }
 
 .page-header {
-  background-color: white;
   color: #000000;
 }
 
@@ -140,16 +227,19 @@ ol {
 }
 
 .navigation-item {
-  margin-right: 10px; 
-} 
+  margin-right: 10px;
+  margin-left: auto;
+}
 
 .navigation-user {
   max-width: 270px;
+  margin-left: auto;
 }
 
 .navigation-user .navigation-list {
   min-width: 18px;
   min-height: 17px;
+  margin-left: auto;
 
 }
 
@@ -174,6 +264,7 @@ ol {
   line-height: 36px;
   text-transform: uppercase;
   color: #000000;
+
 }
 
 .discription-sedona-box {
@@ -192,6 +283,16 @@ ol {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+
+}
+
+.advantages-title-bottom {
+  margin-top: 103px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 .advantages-title {
@@ -317,7 +418,12 @@ ol {
 .submit-catalog {
   text-align: center;
   padding: 94px 0;
- 
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .submit-title {
@@ -365,11 +471,6 @@ ol {
   line-height: 21px;
 }
 
-.footer-container {
-  display: flex;
-  width: 1200px;
-  margin: 0 auto;
-}
 
 .footer-socials-list {
   width: 142px;
@@ -400,16 +501,19 @@ ol {
   padding-left: 70px;
   padding-top: 35px;
   padding-right: 635px;
+  margin: 0;
   font-style: normal;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
   color: #FFFFFF;
 }
+
 .breadcrumbs {
   display: flex;
   padding-left: 72px;
 }
+
 .breadcrumbs-item {
   font-style: normal;
   font-weight: 400;
@@ -417,13 +521,16 @@ ol {
   line-height: 21px;
   color: #FFFFFF;
 }
+
 .breadcrumbs-link {
   max-width: 73px;
   margin-left: 10px;
 }
+
 .breadcrumbs:first-child {
   margin-left: 72px;
 }
+
 .background-header {
   background-image: url(../images/background-catalog.jpg);
   background-repeat: no-repeat;
@@ -431,13 +538,15 @@ ol {
   width: 1200px;
   min-height: 420px;
 }
+
 .catalog-filter {
   display: flex;
   flex-direction: row;
-  
+
 }
+
 .catalog-filter-group {
-  border:0;
+  border: 0;
 }
 
 .catalog-filter-group-value {
@@ -445,31 +554,35 @@ ol {
   display: flex;
   flex-direction: column;
 }
-.catalog-filter-group-button {
- margin:0;
- padding:0;
- 
 
-  border:none;
+.catalog-filter-group-button {
+  margin: 0;
+  padding: 0;
+
+
+  border: none;
   display: flex;
   flex-direction: column;
 }
+
 .catalog-filter-title {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
-  margin-top:40px;
+  margin-top: 40px;
   margin-left: 70px;
   margin-right: 70px;
 }
+
 .catalog-filter-list {
-  margin:0;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
+
 .catalog-filter-item {
   padding-top: 15px;
   padding-left: 70px;
@@ -487,29 +600,33 @@ ol {
 .catalog-title-match {
   padding-top: 57px;
   padding-bottom: 60px;
-  margin:0;
+  padding-left: 72px;
+  margin: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
 }
+
 .catalog-container {
   display: flex;
   justify-content: space-between;
 }
 
 .catalog-how-much {
-  margin:0;
+  margin: 0;
   padding-right: 50px;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
 }
+
 .value-container {
   display: flex;
 }
+
 .catalog-filter-value {
   font-family: "PT Sans";
   font-style: normal;
@@ -519,9 +636,11 @@ ol {
   margin-top: 34px;
   width: 145px;
 }
+
 .catalog-filter-range {
   padding-top: 32px;
 }
+
 .catalog-filter-reset {
   font-family: "PT Sans";
   font-style: normal;
@@ -531,7 +650,9 @@ ol {
 }
 
 .catalog-select {
-  margin-top: 48px;
+  min-width: 290px;
+  max-height: 50px;
+  margin-top: 55px;
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
@@ -541,20 +662,40 @@ ol {
 }
 
 .hotel-card-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin:0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  margin: 0;
   padding: 0;
-  
+
 }
-.hotel-card-item {
-  
+
+.first-card {
+  margin-left: 73px;
 }
+
+.hotel-card-desc {
+  display: grid;
+  grid-template-columns: 170px 170px;
+  grid-template-rows: auto min-content 40px;
+  gap: 16px 20px;
+
+
+}
+
+.hotel-card-link {
+  display: grid;
+  grid-template-rows: 211px min-content;
+  grid-column: 1/3;
+}
+
 .hotel-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: black;
+  grid-column: 1/3;
+  grid-row: 2/3;
 }
 
 .hotel-card-link {
@@ -562,6 +703,13 @@ ol {
 }
 
 .hotel-card-price {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.hotel-card-price-name {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -578,23 +726,28 @@ ol {
 }
 
 .pagination {
+  display: flex;
+  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   text-transform: uppercase;
   color: white;
 }
-.pagination {
-  display: flex;
-  margin:0;
-  padding:0;
+
+.first-pagination {
+  padding-left: 73px;
 }
+
+
 .pagination-item:not(:last-child) {
   padding-right: 8px;
 }
+
 .pagination-item {
   padding-top: 96px;
 }
+
 .pagination-link-first {
   display: block;
   box-sizing: border-box;
@@ -605,9 +758,10 @@ ol {
   font-size: 20px;
   line-height: 36px;
   text-decoration: none;
-  color:#000000;
+  color: #000000;
   background-color: #f2f2f2;
 }
+
 .pagination-link {
   display: block;
   box-sizing: border-box;
@@ -618,12 +772,22 @@ ol {
   font-size: 20px;
   line-height: 36px;
   text-decoration: none;
-  color:#FFFFFF;
+  color: #FFFFFF;
   background-color: #82B3D3;
 }
+
 .catalog-bottom {
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
+  align-items: center;
+  margin-right: 71px;
+
+}
+
+.catalog-select-bottom {
+  grid-column: 2/3;
+  width: 160px;
+  height: 50px;
 }
 
 .submit-title-cataloge {
